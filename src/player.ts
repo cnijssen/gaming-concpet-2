@@ -1,7 +1,6 @@
 import * as PIXI from "pixi.js"
 import { Game } from "./game"
 import { Ground } from "./ground"
-import jump from "url:./sounds/jumpSound.wav"
 
 export class Player extends PIXI.Sprite {
     xspeed = 0
@@ -57,7 +56,6 @@ export class Player extends PIXI.Sprite {
                 if (!this.jumping) {
                     this.yspeed -= 15
                     this.height = 44
-                    jump.play()
                     
                     this.jumping = true
                 }
@@ -81,7 +79,6 @@ export class Player extends PIXI.Sprite {
             case "W":
             case " ":
                 if (this.jumping) {
-                    jump.volume = 1
                     this.height = 44
                 }
                 break
