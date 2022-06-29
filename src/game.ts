@@ -6,14 +6,12 @@ import backGroundImage from './images/background.jpg'
 import { Ground } from './ground'
 import groundImage from "./images/block.png"
 import space from "url:./music/spacesong.wav"
-import jump from "url:./sounds/jumpSound.wav"
 
 
 
 export class Game {
     pixi: PIXI.Application
     bg: PIXI.TilingSprite
-    jump = HTMLAudioElement
     player: Player;
     ground: Ground
     private elements: ( Player)[] = []
